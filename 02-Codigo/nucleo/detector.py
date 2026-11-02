@@ -53,11 +53,22 @@ def gpu_disponivel() -> bool:
     return "DmlExecutionProvider" in ort.get_available_providers()
 
 
+def _powershell() -> str:
+    """PowerShell pelo PATH ou, se o PATH do Windows estiver incompleto (sem System32), pela pasta do sistema."""
+    import os
+    import shutil
+    achado = shutil.which("powershell")
+    if achado:
+        return achado
+    return os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "WindowsPowerShell", "v1.0",
+                        "powershell.exe")
+
+
 def listar_gpus() -> list[str]:
     """Nomes das placas de vídeo do Windows (só para mostrar ao usuário)."""
     import subprocess
     try:
-        r = subprocess.run(["powershell", "-NoProfile", "-Command",
+        r = subprocess.run([_powershell(), "-NoProfile", "-Command",
                             "(Get-CimInstance Win32_VideoController).Name"], capture_output=True, text=True,
                            timeout=10, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         nomes = [n.strip() for n in r.stdout.splitlines() if n.strip()]

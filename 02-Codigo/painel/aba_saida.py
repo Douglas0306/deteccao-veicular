@@ -243,8 +243,11 @@ class AbaSaida(QWidget):
     # ---------------------------------------------------------- GPU
     def _procurar_gpu(self):
         """Em segundo plano: consultar o Windows leva ~1 s."""
-        nome = gpu_principal(listar_gpus()) if gpu_disponivel() else None
-        self._gpu_encontrada.emit(nome or "")
+        if not gpu_disponivel():
+            self._gpu_encontrada.emit("")
+            return
+        # o DirectML existe; se não der para ler o nome da placa (PowerShell indisponível), ainda oferece a GPU
+        self._gpu_encontrada.emit(gpu_principal(listar_gpus()) or "placa de vídeo (DirectML)")
 
     def _mostrar_gpu(self, nome: str):
         if nome:
