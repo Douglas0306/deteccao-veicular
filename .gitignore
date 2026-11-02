@@ -1,0 +1,11 @@
+# Ambiente e saídas
+.venv/
+__pycache__/
+*.pyc
+04-Saida/*
+!04-Saida/.gitkeep
+# Modelos vão nos Releases do GitHub, não no código
+*.onnx
+*.pt
+# Marca de instalação criada pelo .bat
+requisitos_instalados.txt

@@ -1,0 +1,78 @@
+CONTADOR DE VEÍCULOS O/D – COMO EXECUTAR
+========================================
+
+Aplicação que transforma o vídeo de uma câmera de cruzamento (live do YouTube ou arquivo)
+em dados de tráfego: CSVs de veículos (origem, destino, tempo parado) e de fila por braço,
+mais gráficos PNG.
+
+
+REQUISITOS
+----------
+- Windows 10 ou 11 (64 bits).
+- Python 3.12, 3.13 ou 3.14 (testado no 3.13). Se não houver, o .bat oferece instalar o Python 3.13 pelo
+  winget ou indica o site https://www.python.org/downloads/ (marcar "Add python.exe to PATH").
+- Internet na primeira execução (cerca de 250 MB de bibliotecas) e para usar lives do YouTube.
+- Cerca de 1 GB livre em disco depois da instalação.
+- Placa de vídeo é opcional: a aplicação usa a GPU pelo DirectML (NVIDIA, AMD ou Intel) se
+  houver, senão roda na CPU.
+
+
+COMO USAR
+---------
+1. Descompacte o .zip em uma pasta de caminho curto (por exemplo, na Área de Trabalho ou em
+   C:\ContadorOD). O Windows limita caminhos a 260 caracteres: se a pasta estiver "funda"
+   demais, o .bat avisa antes de instalar.
+2. Dê dois cliques em Iniciar_ContadorOD.bat.
+   - 1a vez: o .bat cria o ambiente virtual (.venv) dentro da pasta e instala as bibliotecas.
+     Leva de 5 a 15 minutos; a janela preta mostra cada etapa (1/5 a 5/5) com o horário.
+     O programa não está travado: espere a mensagem "Abrindo o Contador O/D".
+   - Da 2a vez em diante: abre direto, em poucos segundos.
+3. Mantenha a janela preta aberta enquanto usa o programa (avisos e erros aparecem nela).
+
+
+PRIMEIRO TESTE (ROIs JÁ CONFIGURADAS)
+-------------------------------------
+1. Aba "1. Fonte do vídeo": o link da câmera 4 Corners (Coldwater, EUA) já vem preenchido:
+   https://www.youtube.com/watch?v=1H0iTzv2jiQ  -> clique em Validar.
+2. Aba "2. ROIs": o programa avisa que já existem ROIs salvas para essa câmera (01-Config);
+   responda Sim para carregar as 8 ROIs, confira e avance.
+3. Aba "3. Saída": a pasta padrão é 04-Saida. Avance.
+4. Aba "4. Execução": clique em Iniciar; para terminar, clique em Parar.
+Os arquivos ficam em 04-Saida\<câmera>\<data>\ (CSVs) e ...\graficos\ (PNGs).
+
+Também vem configurada a live de Shinjuku (Tóquio), com 7 ROIs:
+   https://www.youtube.com/watch?v=6dp-bvQ7RWo
+Para outra câmera, cole o link, valide e desenhe as ROIs na aba 2 (elas são salvas em 01-Config).
+
+
+CONTEÚDO DA PASTA
+-----------------
+Iniciar_ContadorOD.bat   prepara o ambiente (1a vez) e abre o programa
+requirements.txt         bibliotecas instaladas no .venv
+01-Config\               ROIs e snapshots das câmeras já configuradas
+02-Codigo\               código da aplicação
+03-Modelos\              modelos de detecção (.onnx): Dia e Noite (ver MODELOS); outro .onnx pode ser escolhido na aba 3
+04-Saida\                onde os dados são gravados
+.venv\                   criada na 1a execução (não precisa ir no .zip)
+
+
+MODELOS: DIA E NOITE
+--------------------
+Na aba "3. Saída", em Avançado, a lista "Modelo" escolhe o arquivo de detecção:
+- Dia   (vehicle_stage2_full_v5_best.onnx)   -> padrão; use em câmeras de dia.
+- Noite (vehicle_stage4_noite_luz_best.onnx) -> o mesmo modelo treinado também com imagens noturnas;
+  detectou mais veículos à noite nos testes (mAP50 0,64 -> 0,79 num teste de 29 imagens), com uma
+  pequena queda de dia (0,70 -> 0,68). Os dois recebem a imagem normal, sem tratamento.
+Os números são de um piloto com poucos dados noturnos; detalhes e limites em docs_modelo\MODELO_NOITE_LEIA-ME.md.
+O arquivo sessoes_<câmera>.csv grava qual modelo rodou cada coleta (coluna "modelo").
+
+
+SE ALGO DER ERRADO
+------------------
+- Falha na instalação: confira a internet e clique de novo no .bat (ele continua de onde parou).
+  Se persistir, apague a pasta .venv e execute outra vez.
+- "DLL load failed" ao abrir: instale o Microsoft Visual C++ Redistributable (x64):
+  https://aka.ms/vs/17/release/vc_redist.x64.exe
+- Live do YouTube não abre: o YouTube muda com frequência; atualize o leitor de links abrindo
+  um cmd nesta pasta e rodando:  .venv\Scripts\python -m pip install -U yt-dlp
+- Para reenviar a pasta a outra pessoa, zipe SEM a pasta .venv (ela é recriada lá).

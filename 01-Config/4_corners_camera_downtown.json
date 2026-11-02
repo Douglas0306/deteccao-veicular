@@ -1,0 +1,215 @@
+{
+  "versao": 1,
+  "camera_id": "4_corners_camera_downtown",
+  "fonte": "https://www.youtube.com/watch?v=1H0iTzv2jiQ",
+  "video_id": "1H0iTzv2jiQ",
+  "titulo": "4 Corners Camera Downtown 2026-10-24 15:35",
+  "resolucao": [
+    1280,
+    720
+  ],
+  "snapshot": "4_corners_camera_downtown_snapshot.jpg",
+  "salvo_em": "2026-10-24T15:39:25-03:00",
+  "rois": [
+    {
+      "nome": "cima_origem",
+      "direcao": "cima",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          274.7,
+          389.1
+        ],
+        [
+          587.3,
+          366.2
+        ]
+      ],
+      "linha_saida": [
+        [
+          599.9,
+          376.0
+        ],
+        [
+          267.2,
+          409.3
+        ]
+      ]
+    },
+    {
+      "nome": "baixo_origem",
+      "direcao": "baixo",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          774.1,
+          590.2
+        ],
+        [
+          1150.7,
+          541.4
+        ]
+      ],
+      "linha_saida": [
+        [
+          748.4,
+          567.9
+        ],
+        [
+          1130.0,
+          518.5
+        ]
+      ]
+    },
+    {
+      "nome": "esquerda_origem",
+      "direcao": "esquerda",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          230.9,
+          470.7
+        ],
+        [
+          271.6,
+          605.2
+        ]
+      ],
+      "linha_saida": [
+        [
+          321.3,
+          609.9
+        ],
+        [
+          262.3,
+          464.2
+        ]
+      ]
+    },
+    {
+      "nome": "direita_origem",
+      "direcao": "direita",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          1017.2,
+          451.5
+        ],
+        [
+          905.8,
+          383.1
+        ]
+      ],
+      "linha_saida": [
+        [
+          827.1,
+          384.6
+        ],
+        [
+          980.1,
+          478.2
+        ]
+      ]
+    },
+    {
+      "nome": "cima_destino",
+      "direcao": "cima",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          591.6,
+          396.1
+        ],
+        [
+          806.8,
+          371.0
+        ]
+      ],
+      "linha_saida": [
+        [
+          567.4,
+          381.1
+        ],
+        [
+          775.1,
+          361.3
+        ]
+      ]
+    },
+    {
+      "nome": "baixo_destino",
+      "direcao": "baixo",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          452.9,
+          635.6
+        ],
+        [
+          813.7,
+          580.6
+        ]
+      ],
+      "linha_saida": [
+        [
+          447.8,
+          670.1
+        ],
+        [
+          825.3,
+          602.5
+        ]
+      ]
+    },
+    {
+      "nome": "esquerda_destino",
+      "direcao": "esquerda",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          270.3,
+          497.4
+        ],
+        [
+          243.5,
+          415.8
+        ]
+      ],
+      "linha_saida": [
+        [
+          216.8,
+          423.2
+        ],
+        [
+          237.6,
+          498.9
+        ]
+      ]
+    },
+    {
+      "nome": "direita_destino",
+      "direcao": "direita",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          1067.7,
+          525.7
+        ],
+        [
+          926.6,
+          441.0
+        ]
+      ],
+      "linha_saida": [
+        [
+          983.0,
+          424.7
+        ],
+        [
+          1082.5,
+          488.5
+        ]
+      ]
+    }
+  ]
+}

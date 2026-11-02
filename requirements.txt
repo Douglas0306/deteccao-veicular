@@ -1,0 +1,10 @@
+# Bibliotecas da aplicação, instaladas no .venv pelo Iniciar_ContadorOD.bat na primeira execução.
+# Versões testadas com Python 3.13 no Windows 11 (têm pacotes prontos para Python 3.12 a 3.14). Se este arquivo mudar, o .bat reinstala sozinho.
+numpy==2.5.4
+opencv-python==5.0.0.93
+onnxruntime-directml==1.24.4  # CPU + GPU pelo DirectX 12 (NVIDIA/AMD/Intel), sem CUDA
+supervision==0.31.0
+trackers==2.6.1               # ByteTrack
+PySide6-Essentials==6.12.0    # janela (só os módulos básicos; o pacote PySide6 completo traz ~500 MB a mais)
+matplotlib==3.11.2            # gráficos PNG
+yt-dlp>=2026.8.19             # leitor de links; sem versão fixa porque o YouTube muda com frequência
