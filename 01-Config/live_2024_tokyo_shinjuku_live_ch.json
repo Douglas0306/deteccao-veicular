@@ -1,0 +1,190 @@
+{
+  "versao": 1,
+  "camera_id": "live_2024_tokyo_shinjuku_live_ch",
+  "fonte": "https://www.youtube.com/watch?v=6dp-bvQ7RWo",
+  "video_id": "6dp-bvQ7RWo",
+  "titulo": "【LIVE】2024 Tokyo Shinjuku 新宿 大ガード交差点 Live Ch 2026-10-20 21:50",
+  "resolucao": [
+    1280,
+    720
+  ],
+  "snapshot": "live_2024_tokyo_shinjuku_live_ch_snapshot.jpg",
+  "salvo_em": "2026-10-20T21:50:53-03:00",
+  "rois": [
+    {
+      "nome": "cima_origem",
+      "direcao": "cima",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          627.2,
+          95.1
+        ],
+        [
+          792.8,
+          121.8
+        ]
+      ],
+      "linha_saida": [
+        [
+          781.7,
+          142.5
+        ],
+        [
+          601.5,
+          110.1
+        ]
+      ]
+    },
+    {
+      "nome": "baixo_origem",
+      "direcao": "baixo",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          79.1,
+          368.6
+        ],
+        [
+          119.7,
+          468.0
+        ]
+      ],
+      "linha_saida": [
+        [
+          147.4,
+          455.2
+        ],
+        [
+          95.1,
+          354.7
+        ]
+      ]
+    },
+    {
+      "nome": "esquerda_origem",
+      "direcao": "esquerda",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          287.4,
+          168.8
+        ],
+        [
+          422.0,
+          120.7
+        ]
+      ],
+      "linha_saida": [
+        [
+          442.3,
+          127.1
+        ],
+        [
+          294.9,
+          185.9
+        ]
+      ]
+    },
+    {
+      "nome": "direita_origem",
+      "direcao": "direita",
+      "tipo": "origem",
+      "linha_entrada": [
+        [
+          1057.8,
+          449.8
+        ],
+        [
+          900.7,
+          720.0
+        ]
+      ],
+      "linha_saida": [
+        [
+          718.0,
+          720.0
+        ],
+        [
+          986.2,
+          412.4
+        ]
+      ]
+    },
+    {
+      "nome": "baixo_destino",
+      "direcao": "baixo",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          215.8,
+          579.1
+        ],
+        [
+          134.6,
+          425.2
+        ]
+      ],
+      "linha_saida": [
+        [
+          112.2,
+          440.2
+        ],
+        [
+          181.6,
+          585.5
+        ]
+      ]
+    },
+    {
+      "nome": "esquerda_destino",
+      "direcao": "esquerda",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          134.6,
+          276.7
+        ],
+        [
+          297.0,
+          180.6
+        ]
+      ],
+      "linha_saida": [
+        [
+          275.7,
+          169.9
+        ],
+        [
+          114.3,
+          255.4
+        ]
+      ]
+    },
+    {
+      "nome": "direita_destino",
+      "direcao": "direita",
+      "tipo": "destino",
+      "linha_entrada": [
+        [
+          1256.5,
+          316.3
+        ],
+        [
+          1190.3,
+          509.6
+        ]
+      ],
+      "linha_saida": [
+        [
+          1220.2,
+          528.9
+        ],
+        [
+          1277.9,
+          326.9
+        ]
+      ]
+    }
+  ]
+}

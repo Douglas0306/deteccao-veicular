@@ -1,0 +1,6 @@
+Coloque aqui os modelos .onnx baixados dos Releases do repositório (não ficam no código):
+
+- vehicle_stage2_full_v5_best.onnx   (Dia, padrão)
+- vehicle_stage4_noite_luz_best.onnx (Noite)
+
+Confira o download com o SHA256SUMS.txt do Release.
