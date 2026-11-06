@@ -79,8 +79,14 @@ if errorlevel 1 (
 
 call :passo "2/5" "Criando o ambiente virtual (.venv) nesta pasta"
 if exist "%VPY%" (
-    echo        já existe, reaproveitando.
-    goto :pip
+    "%VPY%" -m pip --version >nul 2>&1
+    if not errorlevel 1 (
+        echo        já existe, reaproveitando.
+        goto :pip
+    )
+    echo        existe, mas está incompleto ^(a criação foi interrompida^): apagando e recriando.
+    rmdir /s /q "%VENV%"
+    if exist "%VPY%" goto :falha
 )
 %PY% -m venv "%VENV%"
 if errorlevel 1 goto :falha
