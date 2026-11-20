@@ -9,3 +9,12 @@ __pycache__/
 *.pt
 # Marca de instalação criada pelo .bat
 requisitos_instalados.txt
+
+# Câmeras configuradas por cada pessoa: não versionar (só as duas de exemplo abaixo)
+01-Config/*
+!01-Config/4_corners_camera_downtown.json
+!01-Config/4_corners_camera_downtown_snapshot.jpg
+!01-Config/live_2024_tokyo_shinjuku_live_ch.json
+!01-Config/live_2024_tokyo_shinjuku_live_ch_snapshot.jpg
+# Soma de verificação baixada junto com os modelos
+03-Modelos/SHA256SUMS.txt
