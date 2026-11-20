@@ -55,7 +55,7 @@ Este projeto é distribuído sob a **GNU Affero General Public License v3.0** (A
 - Escolhemos a AGPL-3.0 por coerência com os modelos, que foram treinados com Ultralytics/YOLO, também AGPL-3.0.
 - Na prática: quem distribuir uma versão modificada, ou oferecer o programa como serviço pela rede, deve disponibilizar o
   código-fonte correspondente sob a mesma licença.
-- Direitos autorais: Copyright (C) 2026 os integrantes do grupo autor do projeto.
+- Direitos autorais: Copyright (C) 2026 Douglas Henrique, Jeferson Stenzel, Leonardo Moiano e Leonardo Melo.
 - As bibliotecas instaladas pelo `requirements.txt` (NumPy, OpenCV, ONNX Runtime, PySide6, supervision, trackers, matplotlib,
   yt-dlp) têm licenças próprias e não são redistribuídas neste repositório.
 - As imagens do Pexels usadas no treino do modelo da noite seguem a licença do Pexels e **não** fazem parte deste repositório.

@@ -149,6 +149,7 @@ pastas `dataset/` e `runs/` desse projeto) e usam caminhos locais que precisam s
 
 O treino usou um ambiente isolado com o `albumentations` instalado só nele (para não alterar o Python global).
 
-**Licença e fontes:** as imagens vêm do Pexels (uso conforme a licença do Pexels). Os modelos Ultralytics/YOLO têm licença
-AGPL-3.0; vale conferir isso antes de distribuir a aplicação. Os rótulos automáticos usaram o YOLOv8m (COCO) como ponto de
-partida e foram corrigidos à mão.
+**Licença e fontes:** o projeto e os modelos são distribuídos sob a **GNU AGPL-3.0** (arquivo `LICENSE` na raiz do
+repositório), em coerência com os modelos Ultralytics/YOLO, que também são AGPL-3.0. As imagens vêm do Pexels (uso conforme a
+licença do Pexels) e não são redistribuídas. Os rótulos automáticos usaram o YOLOv8m (COCO) como ponto de partida e foram
+corrigidos à mão.
