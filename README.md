@@ -3,7 +3,7 @@
 Aplicação para Windows que lê o vídeo de uma câmera de cruzamento (live do YouTube ou arquivo) e gera dados de tráfego:
 CSVs de veículos (origem, destino, tempo parado) e de fila por braço, mais gráficos PNG. Projeto de faculdade.
 
-> **Estado:** repositório privado em preparação. Ainda **sem licença** definida (decisão do grupo pendente).
+> **Licença:** [GNU AGPL-3.0](LICENSE). Veja a seção **Licença** abaixo.
 
 ## Como rodar
 
@@ -45,5 +45,19 @@ O modelo da noite é um **piloto** (80 imagens noturnas no treino): detalhes, n�
 
 - As lives usadas nas configurações (YouTube) podem sair do ar ou ter termos de uso próprios. Confira antes de redistribuir
   imagens ou dados delas.
-- Os modelos foram treinados com Ultralytics/YOLO (licença AGPL-3.0). Defina a licença do projeto levando isso em conta.
 - As imagens usadas no treino do modelo da noite vêm do Pexels e **não** estão neste repositório.
+
+## Licença
+
+Este projeto é distribuído sob a **GNU Affero General Public License v3.0** (AGPL-3.0). O texto completo está em
+[`LICENSE`](LICENSE). Isso vale para o código **e** para os modelos publicados nos Releases.
+
+- Escolhemos a AGPL-3.0 por coerência com os modelos, que foram treinados com Ultralytics/YOLO, também AGPL-3.0.
+- Na prática: quem distribuir uma versão modificada, ou oferecer o programa como serviço pela rede, deve disponibilizar o
+  código-fonte correspondente sob a mesma licença.
+- Direitos autorais: Copyright (C) 2026 os integrantes do grupo autor do projeto.
+- As bibliotecas instaladas pelo `requirements.txt` (NumPy, OpenCV, ONNX Runtime, PySide6, supervision, trackers, matplotlib,
+  yt-dlp) têm licenças próprias e não são redistribuídas neste repositório.
+- As imagens do Pexels usadas no treino do modelo da noite seguem a licença do Pexels e **não** fazem parte deste repositório.
+
+Este texto não é aconselhamento jurídico.
