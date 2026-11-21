@@ -7,7 +7,7 @@ CSVs de veículos (origem, destino, tempo parado) e de fila por braço, mais gr�
 
 ## Como rodar
 
-1. **Baixe os modelos** na aba *Releases* deste repositório e coloque os `.onnx` na pasta `03-Modelos/` (veja abaixo).
+1. Baixe o projeto (**Code > Download ZIP** ou `git clone`). Os modelos já vêm na pasta `03-Modelos/`.
 2. Dê dois cliques em **`Iniciar_ContadorOD.bat`**.
    - Na primeira vez ele cria o ambiente (`.venv`) e instala as bibliotecas: 5 a 15 minutos, cerca de 250 MB.
    - Depois disso abre direto.
@@ -18,15 +18,15 @@ Placa de vídeo é opcional: com GPU (NVIDIA, AMD ou Intel) a aplicação usa o 
 
 ## Modelos
 
-Os modelos **não ficam no código** (são arquivos binários de ~10 MB). Estão nos *Releases*:
+Os dois modelos já vêm no repositório, na pasta `03-Modelos/` (~10,7 MB cada). Uma cópia fixa também está na aba *Releases* (`v0.1-modelos`):
 
 | Arquivo | Para quê |
 | --- | --- |
 | `vehicle_stage2_full_v5_best.onnx` | **Dia** (padrão) |
 | `vehicle_stage4_noite_luz_best.onnx` | **Noite**: treinado também com imagens noturnas |
 
-Coloque os dois em `03-Modelos/`. Na aba **Saída > Avançado > Modelo** escolha Dia ou Noite. O arquivo `SHA256SUMS.txt` do
-Release permite conferir o download.
+Na aba **Saída > Avançado > Modelo** escolha Dia ou Noite. O arquivo `03-Modelos/SHA256SUMS.txt` permite conferir os
+arquivos.
 
 O modelo da noite é um **piloto** (80 imagens noturnas no treino): detalhes, números e limites em
 [`docs_modelo/MODELO_NOITE_LEIA-ME.md`](docs_modelo/MODELO_NOITE_LEIA-ME.md).
@@ -37,7 +37,7 @@ O modelo da noite é um **piloto** (80 imagens noturnas no treino): detalhes, n�
 | --- | --- |
 | `01-Config/` | ROIs e imagem de referência de cada câmera já configurada |
 | `02-Codigo/` | código da aplicação (`painel/` = janela, `nucleo/` = leitura, detecção, passagens, CSVs, gráficos) |
-| `03-Modelos/` | aqui entram os `.onnx` baixados dos Releases (não versionados) |
+| `03-Modelos/` | modelos de detecção `.onnx` (Dia e Noite) e `SHA256SUMS.txt` |
 | `04-Saida/` | onde os dados são gravados (não versionado) |
 | `docs_modelo/` | documentação do modelo da noite |
 
@@ -50,7 +50,7 @@ O modelo da noite é um **piloto** (80 imagens noturnas no treino): detalhes, n�
 ## Licença
 
 Este projeto é distribuído sob a **GNU Affero General Public License v3.0** (AGPL-3.0). O texto completo está em
-[`LICENSE`](LICENSE). Isso vale para o código **e** para os modelos publicados nos Releases.
+[`LICENSE`](LICENSE). Isso vale para o código **e** para os modelos (`03-Modelos/` e Releases).
 
 - Escolhemos a AGPL-3.0 por coerência com os modelos, que foram treinados com Ultralytics/YOLO, também AGPL-3.0.
 - Na prática: quem distribuir uma versão modificada, ou oferecer o programa como serviço pela rede, deve disponibilizar o

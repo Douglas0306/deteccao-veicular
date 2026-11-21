@@ -4,8 +4,7 @@ __pycache__/
 *.pyc
 04-Saida/*
 !04-Saida/.gitkeep
-# Modelos vão nos Releases do GitHub, não no código
-*.onnx
+# Os .onnx (Dia e Noite) ficam no repositório; pesos de treino (.pt) não
 *.pt
 # Marca de instalação criada pelo .bat
 requisitos_instalados.txt
@@ -16,5 +15,3 @@ requisitos_instalados.txt
 !01-Config/4_corners_camera_downtown_snapshot.jpg
 !01-Config/live_2024_tokyo_shinjuku_live_ch.json
 !01-Config/live_2024_tokyo_shinjuku_live_ch_snapshot.jpg
-# Soma de verificação baixada junto com os modelos
-03-Modelos/SHA256SUMS.txt

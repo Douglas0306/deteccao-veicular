@@ -1,0 +1,2 @@
+83af6141308783912ffdecb465933784979eb68e76abfb5d1c3573b81c9c320d *vehicle_stage2_full_v5_best.onnx
+31cde4dba31d8107a6eab41f618ae51edbffed5452553614403c694cf4cb73f6 *vehicle_stage4_noite_luz_best.onnx
